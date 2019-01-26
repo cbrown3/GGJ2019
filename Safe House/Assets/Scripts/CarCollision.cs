@@ -26,6 +26,11 @@ public class CarCollision : MonoBehaviour
         {
             GetComponent<Rigidbody>().AddForce(Vector3.up * carController.CurrentSpeed, ForceMode.VelocityChange);
         }
+        if (other.tag == "Missile")
+        {
+            GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * carController.CurrentSpeed, new Vector3(0.0f, 0.0f, -1.0f), ForceMode.VelocityChange);
+            Destroy(other.gameObject);
+        }
         if (other.tag == "NPC")
         {
             Debug.Log("You hit an NPC");
