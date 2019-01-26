@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 4740185150264812}
   - component: {fileID: 33938518147355288}
   - component: {fileID: 23801108361491512}
-  - component: {fileID: 64199490345311096}
+  - component: {fileID: 4740950039842765254}
+  - component: {fileID: 6399102821899171946}
   m_Layer: 0
   m_Name: Trash_bin3_2
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,8 +80,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64199490345311096
-MeshCollider:
+--- !u!54 &4740950039842765254
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108622791560416}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6399102821899171946
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,10 +106,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: c9f2ff195818862489f3611256e4769f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.9092967, y: 0.59051305, z: 0.88993835}
+  m_Center: {x: 0, y: 0.29525653, z: -0.0000005364418}
 --- !u!1 &1326361044338240
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +120,7 @@ GameObject:
   - component: {fileID: 4550130217831460}
   - component: {fileID: 33841032909959120}
   - component: {fileID: 23211526988707122}
-  - component: {fileID: 64809932156164348}
+  - component: {fileID: 3952156022144638513}
   m_Layer: 0
   m_Name: trash.003
   m_TagString: Untagged
@@ -172,8 +188,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64809932156164348
-MeshCollider:
+--- !u!65 &3952156022144638513
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -182,7 +198,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: c9f2ff195818862489f3611256e4769f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.7281008, y: 0.33718696, z: 0.733902}
+  m_Center: {x: -0.002838537, y: 0.5052885, z: -0.005179569}
