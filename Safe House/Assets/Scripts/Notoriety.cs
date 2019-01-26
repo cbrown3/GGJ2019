@@ -26,6 +26,8 @@ public class Notoriety : MonoBehaviour
             chopperPos += -transform.forward * movementSpeed * Time.deltaTime;
             chopperPos = new Vector3(chopperPos.x, 33, chopperPos.z);
             policeChopper.transform.position = chopperPos;
+
+
         }
     }
 
