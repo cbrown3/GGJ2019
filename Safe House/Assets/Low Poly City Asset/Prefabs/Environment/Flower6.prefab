@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 4964542910174544}
   - component: {fileID: 33053861240915190}
   - component: {fileID: 23399752151755198}
-  - component: {fileID: 64275410335679076}
+  - component: {fileID: 2012021537833074182}
+  - component: {fileID: 8628745657352491352}
   m_Layer: 0
   m_Name: Flower6
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,8 +80,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64275410335679076
-MeshCollider:
+--- !u!54 &2012021537833074182
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520681421824306}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &8628745657352491352
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,7 +106,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 7c20ad6efe91ddf44b679c1fabbb1293, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.75457394, y: 0.59526503, z: 0.7592712}
+  m_Center: {x: -0.00000010430813, y: 0.29763252, z: 0.00000014901161}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64914758495466190}
   m_Layer: 0
   m_Name: Bus_station2
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,6 +89,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 179ec1ff7dfa0584ab34a0d01dfa4dde, type: 3}
