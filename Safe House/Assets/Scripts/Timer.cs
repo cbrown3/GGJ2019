@@ -8,7 +8,16 @@ public class Timer : MonoBehaviour
     public Text timer;
     public float minutes = 5;
     public float seconds = 0;
-    public float miliseconds = 0;
+    public float milliseconds = 0;
+
+    /** the time on the timer that will switch the color from green to yellow in minutes **/
+    public int GreentoYellow;
+
+    /** the time on the timer that will switch the color from yellow to red in seconds**/
+    public float YellowtoRed;
+
+    /** the time on the timer that will make the timer flash in seconds**/
+    public float RedFlash;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +28,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (miliseconds <= 0)
+        if (milliseconds <= 0)
         {
             if (seconds <= 0)
             {
@@ -31,11 +40,65 @@ public class Timer : MonoBehaviour
                 seconds--;
             }
 
-            miliseconds = 100;
+            milliseconds = 100;
         }
 
-        miliseconds -= Time.deltaTime * 100;
+        milliseconds -= Time.deltaTime * 100;
 
-        timer.text = string.Format("{0}:{1}:{2}", minutes, seconds, (int)miliseconds);
+        string minuteStr = minutes.ToString();
+        string secondStr = seconds.ToString();
+        string millisecondStr = milliseconds.ToString();
+
+        if(seconds < 10)
+        {
+            secondStr = "0" + secondStr;
+        }
+
+        if(milliseconds < 10)
+        {
+            millisecondStr = "0" + millisecondStr;
+        }
+
+        millisecondStr = millisecondStr.Substring(0, 2);
+
+        timer.text = minuteStr + ":" + secondStr + ":" + millisecondStr;
+
+        //Update the color
+
+        if (minutes <= 0 && seconds < YellowtoRed)
+        {
+            timer.CrossFadeColor(Color.red, 0.1f, true, false);
+            return;
+        }
+        else if(minutes < GreentoYellow)
+        {
+            timer.CrossFadeColor(Color.yellow, 0.1f, true, false);
+            return;
+        }
+        else
+        {
+            timer.color = Color.green;
+        }
+    }
+
+    public IEnumerator FadeTextToFullAlpha(float t, Text i)
+    {
+        i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
+        while (i.color.a < 1.0f)
+        {
+            i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a + (Time.deltaTime / t));
+            yield return null;
+        }
+    }
+
+    public IEnumerator FadeTextToZeroAlpha(float t, Text i)
+    {
+        i.color = new Color(i.color.r, i.color.g, i.color.b, 1);
+        while (i.color.a > 0.0f)
+        {
+            i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
+            yield return null;
+        }
     }
 }
+
