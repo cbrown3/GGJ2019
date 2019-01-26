@@ -34,7 +34,7 @@ public class Timer : MonoBehaviour
         {
             if (milliseconds <= 0 && seconds <= 0 && minutes <= 0)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(1);
             }
 
             if (milliseconds <= 0)
