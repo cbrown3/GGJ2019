@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+<<<<<<< HEAD
   - Timer
+=======
+  - Target
+>>>>>>> a08a05e205462d66505f25ec2b061961a277eaab
   layers:
   - Default
   - TransparentFX
