@@ -141,8 +141,16 @@ public class StartOptions : MonoBehaviour {
         HideDelayed();
         Debug.Log("Coroutine done. Game started in same scene! Put your game starting stuff here.");
 
-        camera.GetComponent<Timer>().setStart(true);
-        car.GetComponent<CarUserControl>().enabled = true;
+        if (SceneManager.GetActiveScene().name.Equals("Test"))
+        {
+            camera.GetComponent<Timer>().setStart(true);
+            car.GetComponent<CarUserControl>().enabled = true;
+        }
+        else
+        {
+            SceneManager.LoadScene(0); // Restart game bc script controls don't work
+        }
+
     }
 
 
