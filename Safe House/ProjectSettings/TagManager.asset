@@ -3,17 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags:
   - Fire
-<<<<<<< HEAD
-  - Timer
-=======
   - Target
->>>>>>> a08a05e205462d66505f25ec2b061961a277eaab
-=======
-  tags: []
->>>>>>> parent of a08a05e... Home Marker Created
   layers:
   - Default
   - TransparentFX
