@@ -10,6 +10,7 @@ TagManager:
   - Building
   - NPC
   - Prop
+  - Blockade
   layers:
   - Default
   - TransparentFX

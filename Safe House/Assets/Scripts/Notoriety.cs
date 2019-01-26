@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Notoriety : MonoBehaviour
 {
     public GameObject policeChopper;
     public float movementSpeed = 25;
     private bool pursuit;
+    public Text notoriety;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,12 @@ public class Notoriety : MonoBehaviour
             chopperPos = new Vector3(chopperPos.x, 33, chopperPos.z);
             policeChopper.transform.position = chopperPos;
 
+            GameObject[] blockades = GameObject.FindGameObjectsWithTag("Blockade");
 
+            foreach(GameObject obj in blockades)
+            {
+                obj.transform.position = new Vector3(obj.transform.position.x, 0, obj.transform.position.z);
+            }
         }
     }
 
@@ -36,6 +43,8 @@ public class Notoriety : MonoBehaviour
         if(!other.name.Contains("Street"))
         {
             pursuit = true;
+
+            notoriety.text = "RUN.";
         }
     }
 }
