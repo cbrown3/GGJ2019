@@ -145,7 +145,7 @@ public class StartOptions : MonoBehaviour {
         HideDelayed();
         Debug.Log("Coroutine done. Game started in same scene! Put your game starting stuff here.");
 
-        if (SceneManager.GetActiveScene().name.Equals("Test"))
+        if (SceneManager.GetActiveScene().name.Equals("LevelDesign"))
         {
             camera.GetComponent<Timer>().setStart(true);
             car.GetComponent<CarUserControl>().enabled = true;
