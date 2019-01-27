@@ -17,12 +17,7 @@ public class Trajectory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 posDiff = car.transform.position - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(posDiff);
-
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, homingSensitivity);
-
-        transform.rotation = rotation;
+        transform.LookAt(car.transform);
 
         transform.Translate(0, 0, speed * Time.deltaTime, Space.Self);
     }
