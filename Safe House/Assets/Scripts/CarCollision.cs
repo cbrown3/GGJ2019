@@ -55,4 +55,13 @@ public class CarCollision : MonoBehaviour
             Debug.Log("You hit a car");
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Spikes")
+        {
+            Debug.Log("You hit spikes");
+            GetComponent<Rigidbody>().velocity = new Vector3();
+        }
+    }
 }

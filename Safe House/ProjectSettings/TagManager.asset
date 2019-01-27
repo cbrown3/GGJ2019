@@ -12,7 +12,11 @@ TagManager:
   - Prop
   - Blockade
   - FxTemporaire
+<<<<<<< HEAD
   - Missile
+=======
+  - Spikes
+>>>>>>> 21aa0e9bbabce0c7bea100ec8ebc59ef99b027d4
   layers:
   - Default
   - TransparentFX
