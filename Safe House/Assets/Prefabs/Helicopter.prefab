@@ -258,13 +258,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100006}
-<<<<<<< HEAD:Safe House/Assets/Prefabs/Helicopter.prefab
-  m_LocalRotation: {x: 0.020776816, y: -0.84937704, z: 0.033530302, w: 0.52631056}
-  m_LocalPosition: {x: 363.0466, y: 33, z: 265.25403}
-=======
-  m_LocalRotation: {x: -0.020522542, y: 0.942935, z: -0.059172574, w: -0.32703367}
-  m_LocalPosition: {x: 253.19524, y: 33, z: 151.3267}
->>>>>>> dde7ec12d6a13d0ec5055a3afd2699274b014f84:Safe House/Assets/Police Car & Helicopter/Prefabs/Helicopter.prefab
+  m_LocalRotation: {x: 0.124942906, y: 0.22544402, z: -0.029165953, w: 0.965771}
+  m_LocalPosition: {x: -21.386894, y: 33, z: 42.97302}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
