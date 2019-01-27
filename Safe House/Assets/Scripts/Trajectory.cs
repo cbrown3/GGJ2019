@@ -6,7 +6,7 @@ public class Trajectory : MonoBehaviour
 {
     private GameObject car;
     private float homingSensitivity = 0.5f;
-    private float speed = 10;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()

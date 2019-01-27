@@ -39,6 +39,13 @@ public class Notoriety : MonoBehaviour
                 obj.transform.position = new Vector3(obj.transform.position.x, 0, obj.transform.position.z);
             }
 
+            GameObject[] spikes  = GameObject.FindGameObjectsWithTag("Spikes");
+
+            foreach (GameObject obj in spikes)
+            {
+                obj.transform.position = new Vector3(obj.transform.position.x, 0.2f, obj.transform.position.z);
+            }
+
             GameObject missile = null;
 
             if (!missileFired)
