@@ -39,6 +39,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Missile (Launched) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6140509957551747826, guid: 285fd8dbd96cfab43b28b8e12386178d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 11.880511
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140509957551747826, guid: 285fd8dbd96cfab43b28b8e12386178d,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 26.573748
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140509957551747826, guid: 285fd8dbd96cfab43b28b8e12386178d,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.108598866
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140509957551747826, guid: 285fd8dbd96cfab43b28b8e12386178d,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 9.530831
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140509957551747826, guid: 285fd8dbd96cfab43b28b8e12386178d,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 75.4998
+      objectReference: {fileID: 0}
     - target: {fileID: 4110813848190152, guid: 285fd8dbd96cfab43b28b8e12386178d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.341

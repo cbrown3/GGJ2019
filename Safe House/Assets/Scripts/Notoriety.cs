@@ -56,7 +56,8 @@ public class Notoriety : MonoBehaviour
         {
             pursuit = true;
 
-            notoriety.text = "RUN.";
+
+            notoriety.text = "RUN. [MISSILES INCOMING]";
         }
     }
 

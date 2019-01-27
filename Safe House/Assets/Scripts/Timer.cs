@@ -32,8 +32,12 @@ public class Timer : MonoBehaviour
     {
         if (start)
         {
+        
+            // game over
             if (milliseconds <= 0 && seconds <= 0 && minutes <= 0)
             {
+                PlayerPrefs.SetInt("Game State", 0);
+
                 SceneManager.LoadScene(1);
             }
 
