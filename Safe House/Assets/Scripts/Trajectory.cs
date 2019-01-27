@@ -22,6 +22,8 @@ public class Trajectory : MonoBehaviour
 
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, homingSensitivity);
 
+        transform.rotation = rotation;
+
         transform.Translate(0, 0, speed * Time.deltaTime, Space.Self);
     }
 }

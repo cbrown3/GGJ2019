@@ -4,19 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fire
-  - Target
   - Tree
-  - Building
-  - NPC
   - Prop
-  - Blockade
-  - FxTemporaire
-<<<<<<< HEAD
+  - Building
   - Missile
-=======
+  - FxTemporaire
   - Spikes
->>>>>>> 21aa0e9bbabce0c7bea100ec8ebc59ef99b027d4
   layers:
   - Default
   - TransparentFX
@@ -26,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - 
   - 
   - 
   - 

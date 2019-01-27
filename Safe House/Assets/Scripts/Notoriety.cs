@@ -43,7 +43,7 @@ public class Notoriety : MonoBehaviour
 
             if (!missileFired)
             {
-                missile = (GameObject)Instantiate(missilePrefab, policeChopper.transform.position, Quaternion.LookRotation(gameObject.transform.forward));
+                missile = (GameObject)Instantiate(missilePrefab, policeChopper.transform.position, /*Quaternion.LookRotation(gameObject.transform.forward)*/Quaternion.identity);
 
                 missileFired = true;
             }
