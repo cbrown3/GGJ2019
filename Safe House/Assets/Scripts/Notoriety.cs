@@ -6,20 +6,23 @@ using UnityEngine.UI;
 public class Notoriety : MonoBehaviour
 {
     public GameObject policeChopper;
+    public Object missilePrefab; 
     public float movementSpeed = 25;
     private bool pursuit;
+    private bool missileFired;
     public Text notoriety;
 
     // Start is called before the first frame update
     void Start()
     {
         pursuit = false;
+        missileFired = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(pursuit)
+        if (pursuit)
         {
             Debug.Log("Cops are in pursuit!");
 
@@ -31,20 +34,34 @@ public class Notoriety : MonoBehaviour
 
             GameObject[] blockades = GameObject.FindGameObjectsWithTag("Blockade");
 
-            foreach(GameObject obj in blockades)
+            foreach (GameObject obj in blockades)
             {
                 obj.transform.position = new Vector3(obj.transform.position.x, 0, obj.transform.position.z);
+            }
+
+            GameObject missile = null;
+
+            if (!missileFired)
+            {
+                missile = (GameObject)Instantiate(missilePrefab, policeChopper.transform.position, Quaternion.LookRotation(gameObject.transform.forward));
+
+                missileFired = true;
             }
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if(!other.name.Contains("Street"))
+        if (!other.gameObject.name.Contains("Street"))
         {
             pursuit = true;
 
             notoriety.text = "RUN.";
         }
+    }
+
+    public void setMissileFired(bool missileFired)
+    {
+        this.missileFired = missileFired;
     }
 }

@@ -30,6 +30,8 @@ public class CarCollision : MonoBehaviour
         {
             GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * carController.CurrentSpeed, new Vector3(0.0f, 0.0f, -1.0f), ForceMode.VelocityChange);
             Destroy(other.gameObject);
+
+            gameObject.GetComponent<Notoriety>().setMissileFired(false);
         }
         if (other.tag == "NPC")
         {

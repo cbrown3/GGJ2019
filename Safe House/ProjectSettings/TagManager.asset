@@ -11,6 +11,8 @@ TagManager:
   - NPC
   - Prop
   - Blockade
+  - FxTemporaire
+  - Missile
   layers:
   - Default
   - TransparentFX
